@@ -1,0 +1,19 @@
+.avatar_proportioned {
+	height: 100px;
+	width: 100px;
+}
+
+.avatar_distorted {
+	width: 90px;
+	height: 180px;
+}
+
+.original_proportioned {
+	height: 150px;
+	width: 150px;
+}
+
+.original_distorted {
+	height: 150px;
+	width: 150px;
+}

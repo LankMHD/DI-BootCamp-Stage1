@@ -11,10 +11,7 @@ print(liste)
 
 #Defi 2
 word=input("entrez un mot : ")
-liste_mot=list(word)
-for i in range(len(liste_mot)-1):
-	if liste_mot[i-1]==liste_mot[i]:
-		liste_mot.pop(i-1)
-		print(liste_mot)
-mot="".join(liste_mot)
+mot=word
+for i in mot:
+	mot=mot.replace(i+i,i)
 print(mot)

@@ -101,7 +101,7 @@ print()
 print("******** nom correct ********")
 """
 
-#Exercice 7: fruits preferes
+"""#Exercice 7: fruits preferes
 
 print("1. fruits preferes")
 fruit_pref=input("entrez votre(vos) fruit(s) prefere(s) (N.B: mettez juste un espace entre les fruits) : ")
@@ -121,6 +121,7 @@ else:
 
 """
 
+"""
 #Exercice 8 : commande de pizza
 
 liste_graniture=[]
@@ -163,7 +164,7 @@ prix_total=0*len(l1)+10*len(l2)+15*len(l3)
 famille.remove(-1)
 print(famille)
 print(f"nombre total de billets : {len(famille)}\n prix total :{prix_total}")
-
+"""
 
 #Exercice 10 : cammande sandwich
 
@@ -175,7 +176,7 @@ for i in range(len(sandwich_orders)):
 	print(f" J'ai fait ton : {finished_sandwches[i]}")
 
 
-
+"""
 #Exercice 11: sandwich orders #2
 sandwich_orders=["Tuna sandwich","Pastrami sandwich","Avocado sandwich","Pastrami sandwich","Egg sandwich","Sabih sandwich","Pastrami sandwich"]
 finished_sandwches=[]

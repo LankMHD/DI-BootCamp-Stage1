@@ -16,24 +16,33 @@ def display_board(inter):
 
 
 def player_input():
-
 	cmpt=1
 	while cmpt<=9:
 		if cmpt%2!=0:
 			player="X"
 			print("\nPlayer X's turn ... \n")
 			row=int(input("Enter row : "))
-			row=row-1
-			while row<0 and row>3:
-				print("Enter a number between 0 and 3")
-				row=int(input("Enter row : "))
+			l=list(range(1,4))
+			#verification du nombre entré !!  
+			if row in l:
 				row=row-1
+			else:
+				while row not in l:
+					print("Enter a number between 1 and 3 \n")
+					row=int(input("Enter row : "))
+				row=row-1
+				
 			column=int(input("Enter column : "))
-			column=column-1
-			while column<0 and column>3:
-				print("Enter a number between 0 and 3")
-				column=int(input("Enter column : "))
+			#verification du nombre entré !!  
+			if column in l:
 				column=column-1
+			else:
+				while column not in l:
+					print("Enter a number between 1 and 3 \n")
+					column=int(input("Enter column : "))
+				column=column-1
+
+
 			while inter[row][column].isalpha():
 				print("Case yet occupied ! \n")
 				row=int(input("Enter row : "))
@@ -47,12 +56,26 @@ def player_input():
 
 		else:
 			player="O"
+			l=list(range(1,4))
 			print("\nPlayer O's turn ... \n")
 			row=int(input("Enter row : "))
-			row=row-1
-
+			#verification du nombre entré !!  
+			if row in l:
+				row=row-1
+			else:
+				while row not in l:
+					print("Enter a number between 1 and 3 \n")
+					row=int(input("Enter row : "))
+				row=row-1
 			column=int(input("Enter column : "))
-			column=column-1
+			#verification du nombre entré !!  
+			if column in l:
+				column=column-1
+			else:
+				while column not in l:
+					print("Enter a number between 1 and 3 \n")
+					column=int(input("Enter column : "))
+				column=column-1
 
 			while inter[row][column].isalpha():
 				print("Case yet occupied ! \n")
@@ -64,13 +87,12 @@ def player_input():
 				inter[row][column]=player
 			display_board(inter)
 			chek_win()
+
 		cmpt+=1
 	print("MATCH NULL !!! \n\n GAME OVER !! \n\n Good Bye!!!!!!")
 	
-	
+def chek_win(): 
 
-
-def chek_win():
 	player_X=[]
 	for r_c in inter:
 		i=0
@@ -86,7 +108,6 @@ def chek_win():
 			if r_c[i]=="O":
 				player_O.append(i)
 			i+=1
-
 	win=[
 			[0,0,0],
 			[1,1,1],
@@ -103,15 +124,30 @@ def chek_win():
 		print("Player X is the winner !!! ")
 		print("\n\t Game over !!\n\n Good bye!!!!")
 		exit()
-
-
-
+"""
+def chek_win(inter):
+	v1=0
+	v2=0
+	for m in inter:
+		 
+		 
+	if v1==3:
+		print("Player X is the winner !!! ")
+		print("\n\t Game over !!\n\n Good bye!!!!")
+		exit()
+	elif v2==3:
+		print("Player O is the winner !!! ")
+		print("\n\t Game over !!\n\n Good bye!!!!")
+		exit()
+	else:
+"""
 
 
 def play():
-	print("\n                         _____________")
-	print("*********************** | TIC TAC TOE | ******************************")
-	print("                        |_____________|")
-	display_board(inter)
+	print("\n*********************** | TIC TAC TOE | ******************************")
+	print("                         _____________")
+	chek_win()
 	player_input()
+	display_board(inter) 
+	
 play()

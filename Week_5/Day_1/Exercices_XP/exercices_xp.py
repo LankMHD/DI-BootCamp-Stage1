@@ -25,7 +25,7 @@ print(f"Second cat is {cat_2.name} and have {cat_2.age} old year ")
 print(f"Third cat is {cat_3.name} and have {cat_3.age} old year ")
 print(f"\n {old_cat(cat_1,cat_2,cat_3)}")
 
-
+"""
 
 #Exercice 2 : dogs
 
@@ -45,7 +45,7 @@ print(Dog.bark(Davids_dog))
 print(Dog.jump(Davids_dog))
 
 print("\n\tSarahs_dog")
-Sarahs_dog=Dog("Teacup",20)
+Sarahs_dog=Dog("Teacup",90)
 print(Dog.bark(Sarahs_dog))
 print(Dog.jump(Sarahs_dog))
 
@@ -65,14 +65,12 @@ else:
 class Song:
 	def __init__(self,lyrics):
 		self.lyrics=lyrics
-	
-	#@staticmethod
+
 	def sing_me_a_song(self):
 		for i in self.lyrics:
 			print(i)
 		
 stairway= Song(["There’s a lady who's sure","all that glitters is gold", "and she’s buying a stairway to heaven"])
 stairway.sing_me_a_song()
-
-
+"""
 
